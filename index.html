@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link
+    href="https://fonts.googleapis.com/css?family=Tangerine|Caveat&display=swap"
+    rel="stylesheet">	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="head">
+      <span onload="displayTime()" id="time"></span>
+      <h1 class="title">My Personal Blog</h1>
+    </div>
+
+    <div class="box">
+      <img class="img" src="img/p.jpg" width="150" height="150" />
+      <br />
+      <h3>Nahid Islam</h3>
+        <ul>
+        <li><a href="tel:01772280981"><i class="fas fa-phone-square"></i></i></a></li>
+        <li><a href="mailto:nahidislamz@outlook.com"><i class="fas fa-envelope-square"></i></a></li>
+        <li>
+          <div class="sm-container">
+            <a><i class="show-btn fas fa-user"></i></a>
+            <div class="sm-menu">
+              <a href="https://www.facebook.com/nahidislamz"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.twitter.com/nahidislam1997"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/nahidislamz"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.snapchat.com/add/nahidislam"><i class="fab fa-snapchat"></i></a>
+            </div>
+          </div>
+        </li>
+        </ul>
+
+      <p class="para">I am a student of Computer Science. I'm 23 years old and currently studing in
+        Metropolitan University. </p>
+
+
+    </div>
+
+    <div class="gallery-section">
+      <table>
+        <h1 class="gallery">My Work</h1>
+        <div class="border"></div>
+      <tr>
+        <td class="slidertable">
+                <div class="slider animation">
+                  <img src="img/e1.jpg" />
+                </div>
+                <div class="slider animation">
+                  <img src="img/e2.jpg" />
+                </div>
+                <div class="slider animation">
+                  <img src="img/e3.jpg" />      
+                </div>
+                <div class="slider animation">
+                  <img src="img/e4.jpg" />
+                </div>
+        
+
+        </td>
+        <td class="slidertable">
+            <div class="slider1 animation2">
+                <img src="img/u1.jpg" />
+              </div>
+              <div class="slider1 animation2">
+                <img src="img/u2.jpg" />
+              </div>
+              <div class="slider1 animation2">
+                <img src="img/u3.jpg" />               
+              </div>
+              <div class="slider1 animation2">
+                <img src="img/u4.jpg" />
+              </div>
+
+            
+        </td>
+      </tr>
+      <tr>
+        <td><a class="installE" href="https://play.google.com/store/apps/details?id=com.nahidislam.eigo"><h4>Install Now</h4></a></td>
+        <td><a class="installU" href="https://play.google.com/store/apps/details?id=com.nahidz.unitconverter"><h4>Install Now</h4></a></td>
+      </tr>
+    </table>
+
+    </div>
+    <script>
+			var slideIndex = 0;
+			showSlides();
+			function showSlides() {
+
+				var i;
+
+				var slides = document.getElementsByClassName("slider");
+				var slides1 = document.getElementsByClassName("slider1");
+			
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+					slides1[i].style.display = "none";
+				}
+				slideIndex++;
+
+				if (slideIndex > slides.length) { slideIndex = 1 }
+
+				slides[slideIndex - 1].style.display = "block";
+				slides1[slideIndex - 1].style.display = "block";
+
+				setTimeout(showSlides, 3000); 
+			}
+			</script>
+
+    <div class="gallery-section">
+      <div class="inner-width">
+        <h1>My Gallery</h1>
+        <div class="border"></div>
+        <div class="gallery">
+
+          <a href="img/1.png" class="image">
+            <img src="img/1.png" alt="">
+          </a>
+
+          <a href="img/2.png" class="image">
+            <img src="img/2.png" alt="">
+          </a>
+
+          <a href="img/3.png" class="image">
+            <img src="img/3.png" alt="">
+          </a>
+
+          <a href="img/4.png" class="image">
+            <img src="img/4.png" alt="">
+          </a>
+
+          <a href="img/5.png" class="image">
+            <img src="img/5.png" alt="">
+          </a>
+
+          <a href="img/6.png" class="image">
+            <img src="img/6.png" alt="">
+          </a>
+
+          <a href="img/7.png" class="image">
+            <img src="img/7.png" alt="">
+          </a>
+
+          <a href="img/8.png" class="image">
+            <img src="img/8.png" alt="">
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+
+  <script>
+    $(".gallery").magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      gallery:{
+        enabled: true
+      }
+    });
+  </script>
+  <script>
+    $(".show-btn").click(function(){
+       $(".sm-menu").fadeToggle("fast");
+    });
+  </script>
+
+  </body>
+</html>
